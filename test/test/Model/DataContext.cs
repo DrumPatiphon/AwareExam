@@ -21,20 +21,18 @@ namespace test.Models
         {
             options.UseNpgsql(Configuration.GetConnectionString("WebApiDatabase"));
 
-            // Add logging to the DbContext options
             options.UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole()))
-                .EnableSensitiveDataLogging(); // Optional: Enables logging of parameters with values
+                .EnableSensitiveDataLogging();
         }
 
         public DbSet<Customer> customer { get; set; }
-        //public DbSet<Employee> employee { get; set; }
-        //public DbSet<SparePart> spare_part { get; set; }
-        //public DbSet<Department> department { get; set; }
-        //public DbSet<TaskDetail> task_detail { get; set; }
-        //public DbSet<SpareType> spare_type { get; set; }
-        //public DbSet<Dbtask> dbtask { get; set; }
-        //public DbSet<Vehicle> vehicle { get; set; }
-        //public DbSet<Status> status { get; set; }
-        //public DbSet<Province> province { get; set; }
+        public DbSet<Employee> employee { get; set; }
+        public DbSet<SparePart> spare_part { get; set; }
+        public DbSet<Department> department { get; set; }
+        public DbSet<TaskDetail> task_detail { get; set; }
+        public DbSet<SpareType> spare_type { get; set; }
+        public DbSet<Dbtask> dbtask { get; set; }
+        public DbSet<Status> status { get; set; }
+        public DbSet<Province> province { get; set; }
     }
 }

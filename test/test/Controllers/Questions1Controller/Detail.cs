@@ -5,7 +5,7 @@ using test.Models;
 
 namespace test.Controllers.TaskController
 {
-  [Route("api/task/[controller]")]
+  [Route("api/question/[controller]")]
   [ApiController]
   public class Detail : Controller
   {
@@ -55,9 +55,6 @@ namespace test.Controllers.TaskController
 
     private async Task<TaskDto> GetTaskById(int TaskId)
     {
-      //var dbTask = await _context.Set<Dbtask>()
-      //    .Where(o => o.task_id == TaskId)
-      //    .SingleOrDefaultAsync();
 
       var dbTask = await (from dt in _context.Set<Dbtask>()
                           join c in _context.Set<Customer>() on dt.customer_id equals c.customer_id into cg

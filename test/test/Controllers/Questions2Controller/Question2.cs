@@ -20,7 +20,7 @@ namespace test.Controllers.Questions2Controller
         }
 
         [HttpPost]
-        public async Task<ActionResult<IEnumerable<Q2Response>>> GetDbTaskById([FromBody] Q2Request request)
+        public async Task<ActionResult<IEnumerable<Q2Response>>> ConvertToStringArr([FromBody] Q2Request request)
         {
             string[] stringReq = request.Str.Split(',');
             var strings = stringReq.Where(s => !int.TryParse(s, out _)).OrderBy(s => s);

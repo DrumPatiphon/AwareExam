@@ -5,24 +5,10 @@ namespace test.Constants
 {
     public static class TestConstants
     {
-        public class TaskStatus
+        public class CovidApi
         {
-            public const string Save = "SAVED";
-            public const string Cancel = "CANCELLED";
-            public const string Complete = "COMPLETED";
-        }
-
-        public class Action
-        {
-            public const string Save = "Save";
-            public const string Cancel = "Cancel";
-        }
-
-        public class RowState 
-        {
-            public const string Add = "Add";
-            public const string Edit = "Edit";
-            public const string Delete = "Delete";
+            public const string ApiKey = "29fe464ae3msha3a7194121a1bc1p1c7e3cjsnba7d240444ac";
+            public const string Host = "covid-193.p.rapidapi.com";
         }
     }
 }

@@ -4,7 +4,7 @@ using test.Models;
 
 namespace test.Controllers.TaskController
 {
-    [Route("api/task/[controller]")]
+    [Route("api/question/[controller]")]
     [ApiController]
     public class List : Controller
     {
